@@ -288,7 +288,7 @@ class ConnectionPool(object):
 def submit(method, uri, body, headers):
     """ Submit one HTTP request.
     """
-    for key, value in headers.items():
+    for key, value in list(headers.items()):
         del headers[key]
         headers[xstr(key)] = xstr(value)
     headers["Host"] = xstr(uri.host_port)
