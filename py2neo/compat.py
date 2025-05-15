@@ -19,7 +19,7 @@
 try:
     from configparser import SafeConfigParser
 except ImportError:
-    from ConfigParser import SafeConfigParser
+    from configparser import ConfigParser
 
 try:
     from collections.abc import Mapping
